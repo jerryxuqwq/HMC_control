@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmc630x-control"
+version = "0.1.0"
+description = "Python control for HMC6300/HMC6301 on ADI EK1HMC6350 USB motherboards"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+hmc-control = "hmc_control.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["hmc_control*"]
+
+[tool.setuptools.package-data]
+hmc_control = ["profiles/*.txt"]
